@@ -4,10 +4,10 @@ Lab 40107 Collections
 
 Developer: Andrew Hinojosa
 
-Contributors: ???
+Contributors: Jason Few
 
 
-Actual Time to complete: ???
+Actual Time to complete: 7 Hours
 
 * User must create a new project in Visual Studio. 
 * User must push project to Github.

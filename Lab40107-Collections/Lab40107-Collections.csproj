@@ -4,6 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <RootNamespace>Lab40107_Collections</RootNamespace>
+    <LangVersion>7.1</LangVersion>
   </PropertyGroup>
 
 </Project>

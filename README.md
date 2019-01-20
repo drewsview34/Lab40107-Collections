@@ -7,7 +7,7 @@ Developer: Andrew Hinojosa
 Contributors: Jason Few
 
 
-Actual Time to complete: 7 Hours
+Actual Time to complete: 10 Hours
 
 * User must create a new project in Visual Studio. 
 * User must push project to Github.
@@ -18,10 +18,10 @@ Actual Time to complete: 7 Hours
 
 Purpose of the application is to activate a console that outputs an example for each of the custom methods within your deck. It should show what cards were added to the deck, information about what card was removed, and then proof it is gone, as well as a final count of the number of cards without any direct code manipulation.
 
-To Run the program, user must click the start button (Green arrow) in Visual Studio.
+To run the program, user must click the start button (Green arrow) in Visual Studio.
 
 Here is a visual of what the program looks like.
 
 Successful Output
 
-![Lab40107](C:\Users\drews\codefellows\401\Lab40107-Collections\Collections.PNG)
+![Lab40107](https://github.com/drewsview34/Lab40107-Collections/blob/master/Collections.PNG)

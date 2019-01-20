@@ -5,59 +5,59 @@ using System.Collections.Generic;
 namespace Lab40107_Collections.Classes
 {
     /// <summary>
-    /// Allows us to dynamically work with array
+    /// Allows Us To Work With The Array
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class Deck<T> : IEnumerable<T>
     {
 
-        public T[] internalItems = new T[10];
-        public int currentIndex = 0;
+        public T[] cardsInDeck = new T[10];
+        public int currentCard = 0;
 
 
         /// <summary>
-        /// This method adds items to list and resizes if need be
+        /// This Method Adds Items To List And Resizes It
         /// </summary>
         /// <param name="item"></param>
         public void Add(T item)
         {
-            if (currentIndex > internalItems.Length - 1)
+            if (currentCard > cardsInDeck.Length - 1)
             {
-                Array.Resize(ref internalItems, internalItems.Length * 2);
+                Array.Resize(ref cardsInDeck, cardsInDeck.Length * 2);
             }
 
-            internalItems[currentIndex] = item;
-            currentIndex++;
+            cardsInDeck[currentCard] = item;
+            currentCard++;
 
         }
 
         /// <summary>
-        /// Will remove a card from the deck
+        /// Remove a card from the deck
         /// </summary>
         public void RemoveCards()
         {
-            Array.Resize(ref internalItems, currentIndex - 1);
-            currentIndex--;
+            Array.Resize(ref cardsInDeck, currentCard - 1);
+            currentCard--;
         }
 
 
         /// <summary>
-        /// This print the amount of cards in the deck
+        /// Print the amount of cards in the deck
         /// </summary>
         public void CardsInDeck()
         {
-            Console.WriteLine($"There are {currentIndex} left in deck");
+            Console.WriteLine($"There are {currentCard} left in deck");
         }
 
         /// <summary>
-        /// Method from interface
+        /// Interface for Method
         /// </summary>
         /// <returns></returns>
         public IEnumerator<T> GetEnumerator()
         {
-            for (int i = 0; i < currentIndex; i++)
+            for (int i = 0; i < currentCard; i++)
             {
-                yield return internalItems[i];
+                yield return cardsInDeck[i];
             }
 
         }

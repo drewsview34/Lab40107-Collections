@@ -25,7 +25,7 @@ namespace Lab40107XUnit
             deck.Add(cardTwo);
             //assert
 
-            Assert.Contains(cardOne, deck.internalItems);
+            Assert.Contains(cardOne, deck.cardsInDeck);
         }
 
         [Fact]
@@ -46,7 +46,7 @@ namespace Lab40107XUnit
             deck.Add(cardTwo);
             //assert
 
-            Assert.Contains(cardTwo, deck.internalItems);
+            Assert.Contains(cardTwo, deck.cardsInDeck);
         }
 
         [Fact]

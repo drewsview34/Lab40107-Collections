@@ -14,7 +14,6 @@ Actual Time to complete: 7 Hours
 * User must create a README.md (after pushing project to Github).
 * Create a custom generic collection named Deck\<T> that hold cards.
 * Create an enum that holds the different card suites.
-* Utilize a 
 * User must use Unit Testing for every method.
 
 Purpose of the application is to activate a console that outputs an example for each of the custom methods within your deck. It should show what cards were added to the deck, information about what card was removed, and then proof it is gone, as well as a final count of the number of cards without any direct code manipulation.

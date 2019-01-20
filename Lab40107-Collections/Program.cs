@@ -26,10 +26,10 @@ namespace Lab40107_Collections
         {
             //interface is running
 
-            bool running = true;
+            bool execute = true;
 
             //while the interface is runn run this code
-            while (running)
+            while (execute)
             {
                 Console.WriteLine("please choose option 1, 2, 3, or 4");
                 Console.WriteLine("1: Delete a card");
@@ -39,13 +39,13 @@ namespace Lab40107_Collections
                 try
                 {
 
-                    string userSelection = Console.ReadLine();
+                    string playerSelection = Console.ReadLine();
 
-                    int userSelect = Convert.ToInt32(userSelection);
+                    int playerSelect = Convert.ToInt32(playerSelection);
 
-                    if (userSelect == 1 || userSelect == 2 || userSelect == 3 || userSelect == 4)
+                    if (playerSelect == 1 || playerSelect == 2 || playerSelect == 3 || playerSelect == 4)
                     {
-                        switch (userSelect)
+                        switch (playerSelect)
                         {
                             //if user chooses withdrawal
                             case 1:
@@ -168,9 +168,9 @@ namespace Lab40107_Collections
         public static void PrintAllCards(Deck<Card> deck)
         {
             Console.WriteLine("The Cards in the dearler's deck");
-            for (int i = 0; i < deck.currentIndex; i++)
+            for (int i = 0; i < deck.currentCard; i++)
             {
-                Console.Write($":{deck.internalItems[i].CardSuit} {deck.internalItems[i].CardValue}, ");
+                Console.Write($":{deck.cardsInDeck[i].CardSuit} {deck.cardsInDeck[i].CardValue}, ");
 
             }
         }
@@ -192,10 +192,10 @@ namespace Lab40107_Collections
             Console.WriteLine("Player one cards");
 
             //Deals to first player
-            for (int i = 0; i < 5; i++)
+            for (int index = 0; index < 5; index++)
             {
-                playerOne[i] = deck.internalItems[i];
-                Console.WriteLine($":{playerOne[i].CardSuit} {playerOne[i].CardValue}");
+                playerOne[index] = deck.cardsInDeck[index];
+                Console.WriteLine($":{playerOne[index].CardSuit} {playerOne[index].CardValue}");
 
 
             }
@@ -209,7 +209,7 @@ namespace Lab40107_Collections
             for (int i = 5; i < 10; i++)
             {
 
-                playerTwo[counter] = deck.internalItems[i];
+                playerTwo[counter] = deck.cardsInDeck[i];
                 Console.WriteLine($":{playerTwo[counter].CardSuit} {playerTwo[counter].CardValue}");
                 counter++;
             }
@@ -219,9 +219,9 @@ namespace Lab40107_Collections
             Console.WriteLine("Card left in dealer's deck");
 
             //Shows cards left in deck
-            for (int i = 10; i < 11; i++)
+            for (int index = 10; index < 11; index++)
             {
-                LeftInDeck[counter2] = deck.internalItems[i];
+                LeftInDeck[counter2] = deck.cardsInDeck[index];
                 Console.WriteLine($":{LeftInDeck[counter2].CardSuit} {LeftInDeck[counter2].CardValue}");
                 counter2++;
             }
@@ -234,23 +234,23 @@ namespace Lab40107_Collections
         /// <param name="deck">A deck of cards</param>
         public static void RemoveFromDeck(Deck<Card> deck)
         {
-            for (int i = 0; i < deck.currentIndex; i++)
+            for (int index = 0; index < deck.currentCard; index++)
             {
-                Console.Write($"{deck.internalItems[i].CardSuit} {deck.internalItems[i].CardValue}, ");
+                Console.Write($"{deck.cardsInDeck[index].CardSuit} {deck.cardsInDeck[index].CardValue}, ");
 
             }
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine($"Card to remove: {deck.internalItems[deck.currentIndex - 1].CardSuit} {deck.internalItems[deck.currentIndex - 1].CardValue}, ");
+            Console.WriteLine($"Card to remove: {deck.cardsInDeck[deck.currentCard - 1].CardSuit} {deck.cardsInDeck[deck.currentCard - 1].CardValue}, ");
             deck.RemoveCards();
             Console.WriteLine();
             Console.WriteLine();
 
             deck.CardsInDeck();
 
-            for (int i = 0; i < deck.currentIndex; i++)
+            for (int index = 0; index < deck.currentCard; index++)
             {
-                Console.Write($"{deck.internalItems[i].CardSuit} {deck.internalItems[i].CardValue}, ");
+                Console.Write($"{deck.cardsInDeck[index].CardSuit} {deck.cardsInDeck[index].CardValue}, ");
 
             }
             Console.WriteLine();
